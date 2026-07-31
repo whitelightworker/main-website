@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Inner Circle — free live sessions | White Light Worker</title>
+<meta name="description" content="Free live sessions every Thursday and Friday on Zoom. Life, relationships, money, health. Reserve your seat.">
+<meta property="og:title" content="The Inner Circle — free live sessions | White Light Worker">
+<meta property="og:description" content="Free live sessions every Thursday and Friday on Zoom. Life, relationships, money, health. Reserve your seat.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#7C2FE8">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..500;1,6..72,200..400&family=Jost:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   White Light Worker — mobile-first stylesheet
+   Base styles target ~360px. Layers add up at 37.5em / 48em / 64em.
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body,h1,h2,h3,h4,p,ul,ol,li,figure,blockquote,dl,dd,fieldset,legend{margin:0;padding:0}
+ul,ol{list-style:none}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+fieldset{border:0}
+a{color:inherit;text-decoration:none}
+
+:root{
+  /* surfaces */
+  --paper:#FFFFFF;
+  --paper-2:#FBFAFE;
+  --wash-violet:#F5EFFE;
+  --wash-blue:#EBF3FE;
+  --wash-orange:#FFF3E7;
+
+  /* text */
+  --ink:#15161A;
+  --ink-soft:#3D434E;
+  --slate:#666D79;
+  --slate-2:#6E7581;
+
+  /* lines */
+  --rule:#E9E6F1;
+  --rule-soft:#F2F0F7;
+
+  /* accents */
+  --violet:#7C2FE8;
+  --violet-bright:#9D5CFF;
+  --violet-lite:#C9AAFF;
+  --violet-wash:#F3EBFF;
+  --violet-rule:#E4D5FB;
+
+  --blue:#2563EB;
+  --blue-lite:#9CC5FD;
+  --blue-wash:#E6F0FE;
+
+  --orange:#C2410C;
+  --orange-lite:#FDBA74;
+  --orange-wash:#FFF0E0;
+
+  /* metrics */
+  --shell:74rem;
+  --measure:34rem;
+  --pad:1.25rem;
+  --band:3.75rem;
+
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Jost",-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-weight:300;
+  font-size:1rem;
+  line-height:1.65;
+  letter-spacing:.004em;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--violet);color:#fff}
+
+.shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:var(--pad)}
+.band{padding-block:var(--band)}
+.band--tight{padding-block:2.75rem}
+.band--violet{background:var(--wash-violet)}
+.band--blue{background:var(--wash-blue)}
+.band--soft{background:var(--paper-2)}
+.hairline{border-top:1px solid var(--rule)}
+.measure{max-width:var(--measure)}
+
+/* ---------------- type ---------------- */
+.display{
+  font-family:var(--serif);font-weight:300;
+  font-size:2.15rem;line-height:1.08;letter-spacing:-.018em;
+  overflow-wrap:break-word;
+}
+.display em{font-style:italic;font-weight:300;color:var(--violet)}
+h2.title{
+  font-family:var(--serif);font-weight:300;
+  font-size:1.7rem;line-height:1.16;letter-spacing:-.014em;
+}
+h2.title em{font-style:italic;color:var(--violet)}
+h3.sub{font-family:var(--serif);font-weight:400;font-size:1.15rem;line-height:1.25;letter-spacing:-.008em}
+.lead{font-size:1.03rem;line-height:1.6;color:var(--ink-soft);font-weight:300}
+p.body{color:var(--ink-soft)}
+.dim{color:var(--slate)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+.eyebrow{
+  font-family:var(--mono);font-size:.65rem;font-weight:400;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--violet);
+  display:flex;align-items:center;gap:.7rem;line-height:1.3;
+}
+.eyebrow::before{
+  content:"";width:1.6rem;height:2px;flex:none;border-radius:2px;
+  background:linear-gradient(90deg,var(--violet),var(--violet-lite));
+}
+.eyebrow--blue{color:var(--blue)}
+.eyebrow--blue::before{background:linear-gradient(90deg,var(--blue),var(--blue-lite))}
+.eyebrow--orange{color:var(--orange)}
+.eyebrow--orange::before{background:linear-gradient(90deg,var(--orange),var(--orange-lite))}
+
+/* ---------------- header ---------------- */
+.site-head{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--rule-soft);
+}
+.head-in{
+  max-width:var(--shell);margin-inline:auto;padding:0 var(--pad);
+  min-height:3.85rem;display:flex;align-items:center;gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:.6rem;flex:none}
+.brand .mark{width:1.7rem;height:auto;color:var(--ink)}
+.brand-name{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink);line-height:1.35;
+}
+.menu-btn{display:block;background:none;border:0;padding:.6rem;margin-left:auto;cursor:pointer}
+.menu-btn i{display:block;width:1.3rem;height:1.5px;background:var(--ink);border-radius:2px;
+  transition:transform .3s var(--ease),opacity .3s var(--ease)}
+.menu-btn i + i{margin-top:.34rem}
+.nav-open .menu-btn i{background:var(--violet)}
+.nav-open .menu-btn i:nth-child(1){transform:translateY(.37rem) rotate(45deg)}
+.nav-open .menu-btn i:nth-child(2){opacity:0}
+.nav-open .menu-btn i:nth-child(3){transform:translateY(-.37rem) rotate(-45deg)}
+
+.nav{
+  position:fixed;left:0;right:0;top:3.85rem;
+  display:flex;flex-direction:column;align-items:stretch;
+  background:var(--paper);border-bottom:1px solid var(--rule);
+  padding:.25rem var(--pad) 1.5rem;
+  transform:translateY(-10px);opacity:0;pointer-events:none;
+  transition:opacity .28s var(--ease),transform .28s var(--ease);
+  max-height:calc(100dvh - 3.85rem);overflow-y:auto;
+}
+.nav-open .nav{opacity:1;transform:none;pointer-events:auto}
+.nav a{
+  font-size:1rem;color:var(--ink-soft);padding-block:.95rem;
+  border-bottom:1px solid var(--rule-soft);position:relative;
+}
+.nav a[aria-current="page"]{color:var(--violet)}
+.nav .btn{margin-top:1.25rem;border-bottom:0}
+.head-cta{display:none}
+
+/* ---------------- buttons ---------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;width:100%;
+  font-family:var(--sans);font-size:.95rem;font-weight:400;letter-spacing:.04em;
+  padding:.95rem 1.5rem;border:1.5px solid var(--violet);background:var(--violet);color:#fff;
+  border-radius:999px;cursor:pointer;text-align:center;
+  transition:background .25s var(--ease),color .25s var(--ease),box-shadow .25s var(--ease),transform .2s var(--ease);
+}
+.btn .arw{transition:transform .3s var(--ease)}
+.btn:hover{background:var(--violet-bright);border-color:var(--violet-bright);box-shadow:0 6px 20px -8px rgba(124,47,232,.55)}
+.btn:hover .arw{transform:translateX(3px)}
+.btn:active{transform:translateY(1px)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn--ghost:hover{background:var(--violet-wash);border-color:var(--violet);color:var(--violet);box-shadow:none}
+.btn--sm{padding:.6rem 1.15rem;font-size:.8rem;width:auto}
+.btn[disabled]{opacity:.55;pointer-events:none}
+
+/* ---------------- hero ---------------- */
+.hero{position:relative;padding-block:2.5rem 3rem;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;top:-16rem;left:50%;translate:-50% 0;
+  width:34rem;height:26rem;pointer-events:none;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(157,92,255,.16),transparent 70%);
+}
+.hero-grid{position:relative;display:grid;gap:2.25rem}
+.hero h1{margin-block:1.1rem 1rem}
+.hero .lead{max-width:31rem}
+.hero-actions{display:grid;gap:.7rem;margin-top:1.75rem}
+.next-line{
+  margin-top:1.5rem;padding-top:1.1rem;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--slate);
+  display:flex;flex-direction:column;gap:.3rem;
+}
+.next-line b{color:var(--violet);font-weight:500}
+.next-local{color:var(--slate-2)}
+
+/* ---------------- breathing signature ---------------- */
+.breath{position:relative;display:grid;place-items:center;aspect-ratio:1;width:100%;max-width:17rem;margin-inline:auto}
+.breath-aura{
+  position:absolute;inset:8%;border-radius:50%;
+  background:
+    radial-gradient(closest-side at 34% 30%,var(--violet-bright),transparent 70%),
+    radial-gradient(closest-side at 70% 32%,var(--blue-lite),transparent 70%),
+    radial-gradient(closest-side at 70% 70%,var(--orange-lite),transparent 72%),
+    radial-gradient(closest-side at 30% 70%,var(--violet-lite),transparent 72%);
+  filter:blur(26px);opacity:.5;animation:aura 30s linear infinite;
+}
+.breath svg{position:relative;width:100%;height:100%;overflow:visible}
+.breath .ring{fill:none;stroke:var(--violet);transform-origin:50% 50%;animation:breathe 10s var(--ease) infinite}
+.breath .r1{stroke-width:1;opacity:.8}
+.breath .r2{stroke-width:.5;opacity:.32;animation-delay:-.45s}
+.breath .r3{stroke-width:.5;opacity:.16;animation-delay:-.9s}
+.breath-label{
+  position:absolute;display:grid;place-items:center;
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--violet);
+}
+.breath-label span{grid-area:1/1;animation:10s steps(1,end) infinite}
+.breath-label .in{animation-name:lblIn}
+.breath-label .out{animation-name:lblOut}
+@keyframes breathe{0%{transform:scale(.58)}40%{transform:scale(1)}50%{transform:scale(1)}90%{transform:scale(.58)}100%{transform:scale(.58)}}
+@keyframes lblIn{0%{opacity:1}45%{opacity:0}100%{opacity:0}}
+@keyframes lblOut{0%{opacity:0}45%{opacity:1}95%{opacity:0}100%{opacity:0}}
+@keyframes aura{to{transform:rotate(360deg)}}
+
+/* ---------------- reservation form ---------------- */
+.form-card{
+  position:relative;background:var(--paper);border:1px solid var(--violet-rule);
+  border-radius:16px;padding:1.5rem 1.25rem;
+  box-shadow:0 18px 40px -28px rgba(124,47,232,.5);
+}
+.form-card::before{
+  content:"";position:absolute;inset:0;border-radius:16px;pointer-events:none;
+  background:linear-gradient(160deg,rgba(157,92,255,.07),transparent 45%);
+}
+.form-head{position:relative;margin-bottom:1.25rem}
+.form-head .flag{
+  display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--orange);background:var(--orange-wash);border-radius:999px;padding:.3rem .7rem;margin-bottom:.75rem;
+}
+.form-head h2{font-family:var(--serif);font-weight:400;font-size:1.4rem;line-height:1.2;letter-spacing:-.01em}
+.form-head p{font-size:.86rem;color:var(--slate);margin-top:.4rem}
+.form-grid{position:relative;display:grid;gap:.95rem}
+.form-grid .btn{width:100%;margin-top:.25rem}
+.field{display:grid;gap:.35rem}
+.field label{
+  font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);
+}
+.field label .opt{text-transform:none;letter-spacing:0;color:var(--slate-2);font-size:.7rem}
+.field input,.field select{
+  width:100%;padding:.8rem .9rem;border:1px solid var(--rule);border-radius:10px;
+  background:var(--paper-2);font-size:1rem;font-weight:300;color:var(--ink);
+  transition:border-color .2s var(--ease),background .2s var(--ease),box-shadow .2s var(--ease);
+  -webkit-appearance:none;appearance:none;
+}
+.field select{
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237C2FE8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.4rem;
+}
+.field input:focus,.field select:focus{
+  outline:none;border-color:var(--violet);background:var(--paper);
+  box-shadow:0 0 0 3px var(--violet-wash);
+}
+.field.invalid input,.field.invalid select{border-color:var(--orange);background:var(--orange-wash)}
+.field .err{font-size:.78rem;color:var(--orange);min-height:0}
+.field.invalid .err{min-height:1.1rem}
+.form-note{position:relative;margin-top:.9rem;font-size:.78rem;color:var(--slate);text-align:center;line-height:1.5}
+.form-ok{position:relative;text-align:center;padding:1.5rem .5rem}
+.form-ok .tick{
+  width:2.75rem;height:2.75rem;margin:0 auto 1rem;border-radius:50%;
+  background:var(--violet-wash);color:var(--violet);
+  display:grid;place-items:center;font-size:1.3rem;
+}
+.form-ok h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin-bottom:.5rem}
+.form-ok p{font-size:.92rem;color:var(--slate)}
+
+/* ---------------- portrait ---------------- */
+.portrait{position:relative;width:100%;max-width:19rem;aspect-ratio:4/5;overflow:hidden;border-radius:14px;background:var(--violet-wash)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait-ph{
+  position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:.55rem;
+  text-align:center;padding:1.25rem;border:1px dashed var(--violet-rule);border-radius:14px;
+  background:radial-gradient(closest-side at 50% 34%,rgba(157,92,255,.14),transparent 72%),
+             linear-gradient(160deg,var(--violet-wash),var(--wash-blue));
+}
+.portrait-ph b{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--violet);font-weight:400}
+.portrait-ph span{font-size:.8rem;color:var(--slate);max-width:14rem;line-height:1.5}
+.portrait-cap{margin-top:.8rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+
+/* ---------------- splits ---------------- */
+.split{display:grid;gap:2rem;margin-top:2rem}
+.split-col{border-top:2px solid var(--violet);padding-top:1.1rem}
+.split-col--blue{border-top-color:var(--blue)}
+.split-col--blue .tag{color:var(--blue)}
+.split-col .tag{
+  font-family:var(--mono);font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--violet);margin-bottom:.85rem;display:block;
+}
+.split-col p{color:var(--ink-soft);font-size:.98rem}
+.split-col p + p{margin-top:.85rem}
+
+/* ---------------- the hour ---------------- */
+.hour{display:grid;gap:0;margin-top:2rem}
+.hour-step{padding:1.25rem 0 1.25rem;border-top:1px solid var(--rule);position:relative}
+.hour-step::before{content:"";position:absolute;top:-1px;left:0;width:2rem;height:2px;background:var(--violet)}
+.hour-step:nth-child(2)::before{background:var(--blue)}
+.hour-step:nth-child(3)::before{background:var(--orange-lite)}
+.hour-time{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--violet);display:block;margin-bottom:.6rem}
+.hour-step:nth-child(2) .hour-time{color:var(--blue)}
+.hour-step:nth-child(3) .hour-time{color:var(--orange)}
+.hour-step h3{margin-bottom:.5rem}
+.hour-step p{font-size:.94rem;color:var(--ink-soft);line-height:1.6}
+
+/* ---------------- pull quote ---------------- */
+.pull{font-family:var(--serif);font-weight:300;font-style:italic;font-size:1.45rem;line-height:1.28;letter-spacing:-.012em;max-width:44rem}
+.pull em{font-style:italic;color:var(--violet)}
+.pull-note{margin-top:1.25rem;font-size:.9rem;color:var(--slate);max-width:34rem}
+
+/* ---------------- stats: always 2 across on mobile ---------------- */
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem 1rem;margin-top:1.75rem}
+.stat{border-top:2px solid var(--violet-rule);padding-top:.85rem}
+.stat:nth-child(2){border-top-color:var(--blue-lite)}
+.stat:nth-child(3){border-top-color:var(--orange-lite)}
+.stat:nth-child(4){border-top-color:var(--violet-lite)}
+.stat b{
+  display:block;font-family:var(--serif);font-weight:300;font-size:1.95rem;line-height:1;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--violet);
+}
+.stat:nth-child(2) b{color:var(--blue)}
+.stat:nth-child(3) b{color:var(--orange)}
+.stat span{
+  display:block;margin-top:.5rem;font-family:var(--mono);font-size:.6rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--slate);line-height:1.45;
+}
+
+/* ---------------- credentials ---------------- */
+.creds{display:grid;margin-top:1.75rem}
+.cred{display:flex;gap:.9rem;padding:1.05rem 0;border-bottom:1px solid var(--rule-soft)}
+.cred i{font-style:normal;font-family:var(--mono);font-size:.63rem;color:var(--violet);padding-top:.35rem;flex:none;letter-spacing:.06em}
+.cred div b{display:block;font-weight:400;font-size:.98rem;line-height:1.4}
+.cred div span{display:block;font-size:.85rem;color:var(--slate);margin-top:.1rem}
+
+/* ---------------- capsule tabs ---------------- */
+.tabs{display:flex;gap:.25rem;padding:.28rem;margin-top:1.75rem;border:1px solid var(--rule);border-radius:999px;background:var(--paper)}
+.tab{
+  flex:1;border:0;background:transparent;border-radius:999px;cursor:pointer;
+  padding:.6rem .5rem;font-size:.85rem;letter-spacing:.03em;color:var(--slate);
+  transition:background .25s var(--ease),color .25s var(--ease);
+}
+.tab[aria-selected="true"]{background:var(--violet);color:#fff}
+.tab .count{font-family:var(--mono);font-size:.7rem;opacity:.75;margin-left:.35rem}
+.panel[hidden]{display:none}
+
+/* ---------------- session list ---------------- */
+.slist{margin-top:1.75rem;border-top:1px solid var(--rule)}
+.srow{display:grid;gap:.6rem;padding:1.25rem 0;border-bottom:1px solid var(--rule)}
+.srow-when{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem .7rem}
+.sdate{font-family:var(--mono);font-size:.76rem;letter-spacing:.03em;color:var(--violet);font-variant-numeric:tabular-nums}
+.stime{font-family:var(--mono);font-size:.66rem;letter-spacing:.04em;color:var(--slate-2)}
+.stopic{font-family:var(--serif);font-size:1.15rem;font-weight:400;line-height:1.3}
+.snote{font-size:.88rem;color:var(--slate);margin-top:.3rem;max-width:34rem}
+.srow--past .sdate{color:var(--blue)}
+.srow--past .stopic{color:var(--ink-soft)}
+.sflag{
+  justify-self:start;font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;background:var(--violet);border:1px solid var(--violet);border-radius:999px;padding:.45rem 1rem;
+  transition:background .25s var(--ease),color .25s var(--ease);
+}
+.sflag:hover{background:var(--violet-bright);border-color:var(--violet-bright)}
+.slist-empty{padding:2rem 0;color:var(--slate);font-size:.92rem}
+
+/* ---------------- topic cards ---------------- */
+.offers{display:grid;gap:1rem;margin-top:2rem}
+.offer{
+  border:1px solid var(--rule);border-radius:14px;padding:1.4rem 1.25rem;
+  display:flex;flex-direction:column;background:var(--paper);
+  transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.offer:hover{border-color:var(--violet);transform:translateY(-2px);box-shadow:0 14px 32px -22px rgba(124,47,232,.55)}
+.offer .tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin-bottom:.85rem}
+.offer:nth-child(2) .tag{color:var(--blue)}
+.offer:nth-child(3) .tag{color:var(--orange)}
+.offer h3{margin-bottom:.6rem}
+.offer p{font-size:.92rem;color:var(--ink-soft);flex:1}
+
+/* ---------------- quotes ---------------- */
+.quotes{display:grid;gap:1.75rem;margin-top:2rem}
+.quote{border-top:2px solid var(--violet);padding-top:1.15rem}
+.quote:nth-child(2){border-top-color:var(--blue)}
+.quote:nth-child(3){border-top-color:var(--orange-lite)}
+.quote blockquote{font-family:var(--serif);font-weight:300;font-size:1.06rem;line-height:1.45}
+.quote figcaption{margin-top:.9rem;font-family:var(--mono);font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+
+/* ---------------- faq ---------------- */
+.faq{margin-top:1.75rem;border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:1.15rem 2.25rem 1.15rem 0;position:relative;
+  font-family:var(--serif);font-size:1.05rem;font-weight:400;line-height:1.35;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.3rem;top:1.75rem;width:.7rem;height:1.5px;background:var(--violet);border-radius:2px}
+.faq summary::before{
+  content:"";position:absolute;right:.6rem;top:1.4rem;width:1.5px;height:.7rem;background:var(--violet);border-radius:2px;
+  transition:transform .3s var(--ease),opacity .3s var(--ease);
+}
+.faq details[open] summary{color:var(--violet)}
+.faq details[open] summary::before{transform:scaleY(0);opacity:0}
+.faq .ans{padding:0 .5rem 1.25rem 0;color:var(--ink-soft);font-size:.94rem;max-width:46rem}
+.faq .ans p + p{margin-top:.75rem}
+
+/* ---------------- countdown ---------------- */
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem;margin-top:1.5rem;max-width:20rem}
+.cd-unit b{
+  display:block;font-family:var(--serif);font-weight:300;font-size:1.75rem;line-height:1;
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em;color:var(--violet);
+}
+.cd-unit:nth-child(2) b{color:var(--blue)}
+.cd-unit:nth-child(3) b{color:var(--orange)}
+.cd-unit span{display:block;margin-top:.4rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+
+/* ---------------- checklist ---------------- */
+.checks{margin-top:1.5rem;display:grid;gap:.75rem}
+.checks li{display:flex;gap:.75rem;align-items:baseline;color:var(--ink-soft);font-size:.96rem}
+.checks li::before{content:"";width:.4rem;height:.4rem;border-radius:50%;flex:none;translate:0 -.15rem;background:var(--violet)}
+.checks--blue li::before{background:var(--blue)}
+
+/* ---------------- closing band ---------------- */
+.cta-band{position:relative;overflow:hidden;background:var(--wash-violet);border-top:1px solid var(--violet-rule)}
+.cta-glow{
+  position:absolute;width:24rem;height:24rem;right:-8rem;top:-10rem;border-radius:50%;pointer-events:none;
+  background:radial-gradient(closest-side,var(--violet-bright),transparent 70%);opacity:.24;
+}
+.cta-in{position:relative;display:grid;gap:1.75rem}
+
+/* ---------------- footer ---------------- */
+.site-foot{border-top:1px solid var(--rule);padding-block:2.5rem 1.75rem;font-size:.9rem;background:var(--paper)}
+.foot-grid{display:grid;gap:1.75rem}
+.foot-grid h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);font-weight:400;margin-bottom:.85rem}
+.foot-grid li{margin-bottom:.5rem}
+.foot-grid a{color:var(--ink-soft)}
+.foot-grid a:hover{color:var(--violet)}
+.foot-brand .mark{width:2.2rem;color:var(--ink);margin-bottom:.9rem}
+.foot-brand p{font-size:.88rem;color:var(--slate);max-width:22rem}
+.foot-note{
+  margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--rule-soft);
+  display:grid;gap:.5rem;
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:var(--slate-2);text-transform:uppercase;line-height:1.6;
+}
+
+/* ---------------- page head ---------------- */
+.page-head{position:relative;padding-block:2.25rem 1.5rem;overflow:hidden}
+.page-head::before{
+  content:"";position:absolute;top:-17rem;left:50%;translate:-50% 0;width:32rem;height:25rem;
+  pointer-events:none;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(157,92,255,.15),transparent 70%);
+}
+.page-head .shell{position:relative}
+.page-head h1{margin-block:1.1rem 1rem}
+.page-head .lead{max-width:36rem}
+
+/* ---------------- reveal ---------------- */
+.rise{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rise.in{opacity:1;transform:none}
+.rise-d1{transition-delay:.07s}.rise-d2{transition-delay:.14s}
+.rise-d3{transition-delay:.21s}.rise-d4{transition-delay:.28s}
+
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:var(--violet);color:#fff;padding:.65rem 1rem;border-radius:6px}
+
+/* ============================================================
+   >= 600px
+   ============================================================ */
+@media (min-width:37.5em){
+  :root{--pad:2rem;--band:5rem}
+  .display{font-size:3rem}
+  h2.title{font-size:2.15rem}
+  .lead{font-size:1.1rem}
+  .hero-actions{grid-auto-flow:column;justify-content:start;gap:.85rem}
+  .btn{width:auto}
+  .next-line{flex-direction:row;flex-wrap:wrap;gap:.35rem 1rem;align-items:baseline;font-size:.75rem}
+  .split{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.25rem}
+  .hour{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem}
+  .offers{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+  .quotes{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}
+  .stats{gap:1.5rem}
+  .stat b{font-size:2.35rem}
+  .creds{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem}
+  .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}
+  .foot-brand{grid-column:1/-1}
+  .foot-note{grid-template-columns:1fr auto;gap:1rem}
+  .srow{grid-template-columns:10rem 1fr auto;gap:1rem 1.5rem;align-items:start}
+  .srow-when{flex-direction:column;gap:.25rem}
+  .sflag{align-self:center}
+  .form-card{padding:1.75rem 1.5rem}
+  .pull{font-size:1.9rem}
+  .cd-unit b{font-size:2.15rem}
+  .portrait{max-width:22rem}
+}
+
+/* ============================================================
+   >= 768px — desktop nav
+   ============================================================ */
+@media (min-width:48em){
+  :root{--band:6.5rem}
+  .head-in{min-height:4.5rem;gap:1.5rem}
+  .brand .mark{width:2rem}
+  .brand-name{font-size:.62rem;letter-spacing:.2em}
+  .menu-btn{display:none}
+  .nav{
+    position:static;flex-direction:row;align-items:center;gap:1.75rem;
+    background:none;border:0;padding:0;margin-left:auto;
+    transform:none;opacity:1;pointer-events:auto;max-height:none;overflow:visible;
+  }
+  .nav a{font-size:.88rem;padding-block:.3rem;border-bottom:0}
+  .nav a::after{
+    content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;border-radius:2px;
+    background:var(--violet);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);
+  }
+  .nav a:hover{color:var(--violet)}
+  .nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+  .nav .btn{display:none}
+  .head-cta{display:inline-flex;flex:none}
+  .display{font-size:3.6rem}
+  h2.title{font-size:2.5rem}
+  .hero{padding-block:4rem 5rem}
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:3rem;align-items:center}
+  .breath{max-width:22rem}
+  .page-head{padding-block:4rem 2.5rem}
+  .cta-in{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:3rem;align-items:end}
+  .foot-grid{grid-template-columns:1.5fr 1fr 1fr}
+  .foot-brand{grid-column:auto}
+  .split--portrait{grid-template-columns:minmax(0,.68fr) minmax(0,1.32fr);align-items:start}
+  .offers--three{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .quotes{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .form-card{padding:2rem 1.75rem}
+  .form-head h2{font-size:1.6rem}
+}
+
+/* ============================================================
+   >= 1024px
+   ============================================================ */
+@media (min-width:64em){
+  :root{--pad:3rem;--band:8rem}
+  .display{font-size:4.4rem;letter-spacing:-.022em}
+  h2.title{font-size:2.9rem}
+  .lead{font-size:1.18rem}
+  .hour{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:1.75rem}
+  .hour-step{padding-bottom:0}
+  .stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:1.75rem}
+  .stat b{font-size:2.7rem}
+  .pull{font-size:2.6rem}
+  .cd-unit b{font-size:2.6rem}
+  .srow{grid-template-columns:11rem 1fr auto}
+  .portrait{max-width:100%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .breath .ring{transform:scale(.86)}
+  .breath-label .out{opacity:0}
+  .rise{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="head-in">
+    <a class="brand" href="/" aria-label="White Light Worker — home">
+      <svg class="mark" viewBox="0 0 932 730" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M114,727C113,725 111,721 110,719C109,716 108,714 108,714C108,713 107,711 106,708C102,700 101,698 99,692C98,689 96,685 95,683C94,680 92,676 91,673C89,667 88,665 84,657C83,654 82,652 82,652C82,651 81,649 80,646C76,638 75,636 73,630C72,627 70,623 69,621C68,618 66,614 65,611C63,606 62,603 59,596C58,594 56,590 55,587C54,584 52,580 51,578C50,575 48,571 47,568C45,562 44,560 40,552C39,549 38,547 38,546C38,546 37,544 36,541C32,533 31,531 29,525C28,522 26,518 25,516C24,513 22,509 21,506C19,500 18,498 14,490C13,487 12,485 12,484C12,484 11,482 10,479C6,471 5,469 3,464C2,462 1,459 1,459C-1,456 2,456 27,456L54,456L56,461C57,463 59,469 61,474C63,479 65,483 65,484C65,486 67,489 68,492C69,496 71,499 71,500C71,502 73,505 74,508C75,512 77,515 77,516C77,518 79,522 81,527C83,531 85,539 87,543C89,548 91,552 91,554C91,555 93,558 94,562C95,565 97,568 97,570C97,571 99,574 100,578C101,581 103,584 103,586C104,587 105,590 113,612C121,634 122,637 123,638C123,640 125,643 126,646C132,664 133,665 135,658C135,655 137,651 138,648C139,645 141,640 142,637C143,634 145,631 145,630C145,628 146,626 147,624C148,622 149,620 149,618C149,617 150,615 151,613C152,611 153,609 153,608C154,606 155,602 160,588C161,585 163,581 164,578C165,574 167,570 168,566C169,563 171,559 172,556C177,542 178,538 179,536C179,535 180,533 181,530C182,528 183,526 183,526C186,521 184,515 177,498C176,496 174,492 173,489C172,486 170,481 169,479C167,476 165,471 164,468C163,464 161,461 161,461C160,460 160,459 160,458C160,456 162,456 187,456C210,456 214,456 214,458C214,458 214,460 215,461C215,462 217,466 219,471C222,479 224,485 231,503C233,508 235,512 235,514C235,515 237,518 238,522C239,525 241,528 241,530C242,531 243,534 251,556C259,578 260,581 261,582C261,584 263,587 264,590C265,594 267,597 267,598C267,600 269,603 270,606C271,610 273,613 273,614C274,617 277,626 283,641C285,646 286,650 287,651C287,652 288,655 289,657C291,664 291,664 296,652C297,648 299,645 299,644C300,642 301,638 306,624C311,611 312,607 313,606C314,604 315,600 320,586C325,573 326,569 327,568C327,566 328,564 329,562C330,560 331,558 331,556C332,555 333,551 338,538C343,524 344,520 345,518C346,517 347,513 352,500C357,486 358,482 359,480C359,479 361,476 362,473C363,470 365,465 366,462L368,456L379,456C392,456 391,455 386,469C384,475 381,480 381,482C381,483 380,485 379,486C378,488 377,491 377,492C376,493 376,495 375,496C374,498 360,534 357,542C357,544 356,546 355,547C355,549 354,551 353,552C353,553 352,556 351,557C351,558 347,569 342,580C337,592 333,603 333,604C332,605 331,608 331,609C330,610 330,612 329,613C328,615 312,658 309,664C309,666 308,668 307,669C305,674 304,676 296,698C282,733 284,730 279,730C274,730 274,730 272,726C271,723 270,721 270,721C270,720 269,718 268,715C267,713 265,709 264,707C263,704 262,702 262,702C262,701 261,698 259,694C257,691 256,688 256,687C256,687 255,685 254,682C253,680 251,676 250,674C249,671 248,669 248,668C248,668 247,666 246,663C245,661 243,657 242,655C241,652 240,650 240,650C240,649 239,647 238,644C236,641 234,636 233,633C232,630 230,625 228,622C227,619 226,617 226,616C226,616 225,614 224,611C223,609 221,605 220,603C219,600 218,598 218,598C218,597 217,595 216,592C214,589 212,584 211,581C210,578 208,573 206,570C205,567 204,565 204,564C204,564 200,555 199,553C198,552 198,550 198,550C198,547 195,548 194,550C194,551 189,563 184,577C178,591 173,603 173,604C173,606 172,608 171,609C171,611 170,613 169,614C168,616 168,618 167,619C167,620 162,632 157,645C152,658 147,670 147,671C146,672 145,674 145,676C145,677 144,679 143,680C141,686 140,688 132,709L124,730L119,730C116,730 115,730 114,727ZM654,726C653,723 652,721 652,721C652,720 651,718 650,715C648,712 646,707 645,704C643,698 642,696 638,688C637,685 636,683 636,682C636,682 635,680 634,677C630,669 629,667 627,661C626,658 624,654 623,652C622,649 620,645 619,642C617,636 616,634 612,626C611,623 610,621 610,620C610,620 609,618 608,615C604,607 603,605 601,599C599,593 598,591 594,583C593,580 592,578 592,578C592,577 591,575 590,572C586,564 585,562 583,556C582,553 580,549 579,547C578,544 576,540 575,537C573,531 572,529 568,521C567,518 566,516 566,516C566,515 565,513 564,510C560,502 559,500 557,494C556,491 554,487 553,485C552,482 550,478 549,475C546,468 544,463 543,461C540,456 540,456 569,456L595,456L599,466C601,470 604,478 605,482C607,487 609,491 609,492C609,494 611,497 612,500C613,504 615,507 615,508C615,510 617,513 618,516C619,520 621,523 621,524C621,526 623,530 625,535C627,539 629,547 631,551C633,556 635,560 635,562C635,563 637,566 638,570C639,573 641,576 641,578C641,579 643,582 644,586C645,589 647,592 647,594C647,595 649,599 651,604C653,608 655,616 657,620C659,625 661,629 661,630C661,632 663,635 664,638C665,642 667,645 667,646C671,656 672,659 672,661C672,664 674,661 677,655C678,652 679,649 679,648C680,646 681,643 682,640C683,637 685,633 686,630C687,626 689,622 690,618C691,615 693,611 694,608C699,594 700,590 701,588C701,587 702,585 703,583C704,581 705,579 705,578C705,576 706,574 707,572C708,570 709,568 709,566C710,565 711,561 716,548C721,533 722,530 724,526C727,519 726,518 724,512C719,501 718,499 718,498C718,498 717,496 716,493C715,491 713,487 712,485C711,482 710,480 710,479C710,479 709,477 708,474C707,472 705,468 704,466C703,464 702,461 701,460C700,456 699,456 728,456L754,456L756,462C757,464 759,467 759,468C759,470 761,474 763,479C765,483 767,491 769,495C771,500 773,504 773,506C773,507 775,510 776,514C777,517 779,520 779,522C779,523 781,526 782,530C783,533 785,536 785,538C785,539 787,543 789,548C791,552 793,560 795,564C797,569 799,573 799,574C799,576 801,579 802,582C803,586 805,589 805,590C805,592 807,595 808,598C809,602 811,605 811,606C811,608 813,612 815,617C821,633 824,641 827,649C832,662 832,662 833,662C834,662 834,661 834,661C834,660 835,657 836,654C837,652 839,647 840,644C845,629 846,626 847,624C848,623 849,619 854,606C859,592 860,588 861,586C862,585 863,581 868,568C873,554 874,550 875,548C875,547 876,545 877,543C878,541 879,539 879,538C880,536 881,532 886,518C891,505 892,501 893,500C894,498 895,494 900,480C905,467 906,463 907,462C907,460 908,459 908,458C909,456 932,455 932,457C932,457 932,458 931,459C930,460 918,490 909,514C908,517 906,521 905,524C904,526 892,557 887,570C886,573 884,577 883,580C883,582 882,584 881,585C880,587 866,623 863,632C863,633 862,635 861,636C860,638 859,641 859,642C858,643 858,645 857,646C857,647 853,658 848,670C843,681 839,692 839,693C838,694 838,696 837,697C837,698 836,701 835,702C835,703 833,709 831,714C824,730 824,730 819,730C816,730 815,730 814,727C813,726 812,722 811,719C809,716 808,714 808,713C808,713 807,711 806,708C805,706 803,702 802,700C801,697 800,695 800,694C800,694 799,692 798,689C797,687 795,683 794,681C793,678 792,676 792,676C792,675 791,673 790,670C788,667 786,662 785,659C784,656 782,651 780,648C779,645 778,643 778,642C778,642 777,640 776,637C771,626 770,624 770,624C770,623 769,621 768,618C766,615 764,610 763,607C762,604 760,599 758,596C757,593 756,591 756,590C756,590 755,588 754,585C753,583 751,579 750,577C749,574 748,572 748,572C748,571 747,568 745,565C744,561 741,556 740,553C739,550 737,547 737,547C737,547 735,552 732,558C726,574 725,576 723,582C722,583 721,585 721,586C721,588 716,599 711,612C706,625 701,636 701,638C701,639 700,641 699,642C699,644 697,646 697,648C696,649 695,651 695,652C691,664 676,702 675,704C674,705 673,707 673,708C673,710 672,712 671,714C670,717 669,719 667,724C664,732 658,733 654,726ZM442,721C441,721 441,559 441,360L441,0L466,0L491,0L491,361L490,722L466,722C453,722 442,722 442,721Z"/></svg>
+      <span class="brand-name">White Light<br>Worker</span>
+    </a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/inner-circle" aria-current="page">Inner Circle</a>
+          <a href="/about">About</a>
+      <a class="btn" href="#reserve"><span>Reserve a seat</span></a>
+    </nav>
+    <a class="btn btn--sm head-cta" href="#reserve"><span>Reserve a seat</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow rise">The inner circle</p>
+        <h1 class="display rise rise-d1">One hour,<br><em>twice a week.</em></h1>
+        <p class="lead rise rise-d2">Every Thursday and Friday, Saumya runs a live session on Zoom. It is free, it is not recorded, and it is small enough that you can ask your question out loud.</p>
+        <div class="countdown rise rise-d3" data-countdown>
+          <div class="cd-unit"><b class="num" data-d>00</b><span>Days</span></div>
+          <div class="cd-unit"><b class="num" data-h>00</b><span>Hrs</span></div>
+          <div class="cd-unit"><b class="num" data-m>00</b><span>Min</span></div>
+          <div class="cd-unit"><b class="num" data-s>00</b><span>Sec</span></div>
+        </div>
+        <p class="next-line rise rise-d4">
+          <span>Next session</span>
+          <b data-next>Thursday, 8:00 PM IST</b>
+          <span class="next-local" data-next-local></span>
+        </p>
+      </div>
+      
+      <div class="form-card rise rise-d2" id="reserve">
+        <div class="form-head">
+          <span class="flag">Free &middot; Live on Zoom</span>
+          <h2>Reserve your seat</h2>
+          <p>Sixty minutes. Seats are limited so everyone gets question time.</p>
+        </div>
+        <form class="form-grid" novalidate data-reserve>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <span class="err"></span>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required>
+            <span class="err"></span>
+          </div>
+          <div class="field">
+            <label for="f-phone">WhatsApp <span class="opt">(optional)</span></label>
+            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+            <span class="err"></span>
+          </div>
+          <div class="field">
+            <label for="f-session">Which session</label>
+            <select id="f-session" name="session" data-session-options required></select>
+            <span class="err"></span>
+          </div>
+          <div class="field">
+            <label for="f-topic">What is on your mind</label>
+            <select id="f-topic" name="topic" required>
+              <option value="">Choose one</option>
+              <option>Life &amp; direction</option>
+              <option>Relationships &amp; family</option>
+              <option>Money &amp; work</option>
+              <option>Health &amp; energy</option>
+              <option>Prefer not to say</option>
+            </select>
+            <span class="err"></span>
+          </div>
+          <button class="btn" type="submit"><span>Reserve my seat</span><span class="arw">&rarr;</span></button>
+        </form>
+        <p class="form-note">No spam, ever. The Zoom link arrives by email.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band hairline" id="schedule">
+    <div class="shell">
+      <p class="eyebrow rise">The schedule</p>
+      <h2 class="title measure rise rise-d1" style="margin-top:1.1rem">Sessions, <em>past and upcoming.</em></h2>
+      <div class="tabs rise rise-d2" role="tablist" aria-label="Session schedule">
+        <button class="tab" role="tab" data-tab="upcoming" aria-selected="true" aria-controls="panel-upcoming">
+          Upcoming<span class="count" data-count-upcoming>0</span>
+        </button>
+        <button class="tab" role="tab" data-tab="past" aria-selected="false" aria-controls="panel-past">
+          Past<span class="count" data-count-past>0</span>
+        </button>
+      </div>
+      <div class="slist rise rise-d3" id="panel-upcoming" role="tabpanel" data-panel="upcoming" data-upcoming></div>
+      <div class="slist rise" id="panel-past" role="tabpanel" data-panel="past" data-past hidden></div>
+      <p class="dim rise" id="past" style="margin-top:1.25rem;font-size:.85rem">Topics cycle through life, relationships, money and health. Sessions are not recorded &mdash; the past list is here so you can see the rhythm, not to catch up.</p>
+    </div>
+  </section>
+
+  <section class="band band--violet">
+    <div class="shell">
+      <p class="eyebrow rise">How the hour runs</p>
+      <h2 class="title measure rise rise-d1" style="margin-top:1.1rem">Four parts, in the same order, <em>every time.</em></h2>
+      <div class="hour">
+        <div class="hour-step rise rise-d1">
+          <span class="hour-time num">00 &mdash; 15</span>
+          <h3 class="sub">The topic</h3>
+          <p>Plain talk about one thing: a relationship, money, health, a decision. No lecture, no jargon.</p>
+        </div>
+        <div class="hour-step rise rise-d2">
+          <span class="hour-time num">15 &mdash; 30</span>
+          <h3 class="sub">Breathwork</h3>
+          <p>Guided, seated, nothing strenuous. You can keep your camera off throughout.</p>
+        </div>
+        <div class="hour-step rise rise-d3">
+          <span class="hour-time num">30 &mdash; 45</span>
+          <h3 class="sub">Meditation</h3>
+          <p>Built around what came up in the first half, not a recording pressed play on.</p>
+        </div>
+        <div class="hour-step rise rise-d4">
+          <span class="hour-time num">45 &mdash; 60</span>
+          <h3 class="sub">Your questions</h3>
+          <p>Ask anything, out loud or in the chat. Healing appointments are opened at the end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="shell">
+      <div class="split">
+        <div class="rise">
+          <p class="eyebrow">Before you join</p>
+          <h2 class="title" style="margin-top:1.1rem">What you need.</h2>
+          <ul class="checks">
+            <li>Sixty uninterrupted minutes and a door you can close</li>
+            <li>Zoom on a phone or laptop &mdash; the link is emailed when you reserve</li>
+            <li>Headphones, if you have them. The breathwork lands better</li>
+            <li>Somewhere to sit upright. A chair is completely fine</li>
+            <li>Something to write with, for the part at the end</li>
+          </ul>
+        </div>
+        <div class="rise rise-d2">
+          <p class="eyebrow eyebrow--blue">Worth knowing</p>
+          <h2 class="title" style="margin-top:1.1rem">What it is not.</h2>
+          <ul class="checks checks--blue">
+            <li>Not recorded. What is said in the room stays there</li>
+            <li>Not a webinar you watch. You will be asked to participate</li>
+            <li>Not religious, and not tied to any belief system</li>
+            <li>Not a sales call. Healing appointments are offered at the end and ignoring that is completely normal</li>
+            <li>Not medical treatment or a substitute for it</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--soft" id="questions">
+    <div class="shell" style="max-width:58rem">
+      <p class="eyebrow rise">Questions</p>
+      <h2 class="title rise rise-d1" style="margin-top:1.1rem">Before you <em>reserve a seat.</em></h2>
+      <div class="faq rise rise-d2">
+        <details open>
+          <summary>Is it really free?</summary>
+          <div class="ans"><p>Yes. The Thursday and Friday sessions cost nothing and there is no upgrade you need to buy to get value from them. One-to-one healing appointments are paid, and they are offered at the end of the hour. Ignoring that offer is completely normal and nobody follows up to chase you.</p></div>
+        </details>
+        <details>
+          <summary>Do I have to turn my camera on?</summary>
+          <div class="ans"><p>No. Plenty of people keep the camera off for the whole hour, particularly during the breathwork. You will get more out of the last fifteen minutes if you are willing to speak, but typing your question in the chat works too.</p></div>
+        </details>
+        <details>
+          <summary>I have never meditated. Will I be lost?</summary>
+          <div class="ans"><p>No. Everything is guided out loud, step by step, and the breathwork is seated and gentle &mdash; no held postures, nothing strenuous. Most people in the room are working professionals with no background in any of this.</p></div>
+        </details>
+        <details>
+          <summary>Is this religious?</summary>
+          <div class="ans"><p>No. Nothing in the session asks you to hold a belief, adopt a practice, or belong to anything. The techniques come from yoga and pranic healing traditions, and they are taught as techniques.</p></div>
+        </details>
+        <details>
+          <summary>What if I cannot make it live?</summary>
+          <div class="ans"><p>Sessions are not recorded &mdash; people speak openly about real situations and that only works if the room is private. There is another session every week, so the cost of missing one is a few days.</p></div>
+        </details>
+        <details>
+          <summary>What language is it in?</summary>
+          <div class="ans"><p>English, with Hindi wherever it helps. Ask your question in whichever you are more comfortable with.</p></div>
+        </details>
+        <details>
+          <summary>Can this replace therapy or medical treatment?</summary>
+          <div class="ans"><p>No, and it is not offered as an alternative to either. It sits alongside them. If you are dealing with a diagnosed condition, keep your doctor or therapist in the loop &mdash; several people in these sessions do exactly that.</p></div>
+        </details>
+        <details>
+          <summary>How many people are in the room?</summary>
+          <div class="ans"><p>Deliberately small, so that the last fifteen minutes are useful rather than a queue. That is why seats are limited.</p></div>
+        </details>
+        <details>
+          <summary>My question is not here.</summary>
+          <div class="ans"><p>Write and ask &mdash; you will get a straight answer, not a sales sequence. <a data-link="email" data-link-text="1" href="#" style="color:var(--violet);text-decoration:underline">hello@whitelightworker.com</a></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band cta-band">
+    <div class="cta-glow"></div>
+    <div class="shell cta-in">
+      <div>
+        <p class="eyebrow rise">Free &middot; Live on Zoom &middot; Sixty minutes</p>
+        <h2 class="title rise rise-d1" style="margin-top:1.1rem">Come to one <em>and see.</em></h2>
+        <p class="lead rise rise-d2" style="margin-top:1rem;max-width:32rem">If it is not for you, you have lost an hour and gained a decent meditation.</p>
+      </div>
+      <div class="rise rise-d3">
+        <a class="btn" style="width:100%" href="#reserve"><span>Reserve your seat</span><span class="arw">&uarr;</span></a>
+        <p class="dim" style="margin-top:.85rem;font-size:.82rem">Next: <span data-next>Thursday, 8:00 PM IST</span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 932 730" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M114,727C113,725 111,721 110,719C109,716 108,714 108,714C108,713 107,711 106,708C102,700 101,698 99,692C98,689 96,685 95,683C94,680 92,676 91,673C89,667 88,665 84,657C83,654 82,652 82,652C82,651 81,649 80,646C76,638 75,636 73,630C72,627 70,623 69,621C68,618 66,614 65,611C63,606 62,603 59,596C58,594 56,590 55,587C54,584 52,580 51,578C50,575 48,571 47,568C45,562 44,560 40,552C39,549 38,547 38,546C38,546 37,544 36,541C32,533 31,531 29,525C28,522 26,518 25,516C24,513 22,509 21,506C19,500 18,498 14,490C13,487 12,485 12,484C12,484 11,482 10,479C6,471 5,469 3,464C2,462 1,459 1,459C-1,456 2,456 27,456L54,456L56,461C57,463 59,469 61,474C63,479 65,483 65,484C65,486 67,489 68,492C69,496 71,499 71,500C71,502 73,505 74,508C75,512 77,515 77,516C77,518 79,522 81,527C83,531 85,539 87,543C89,548 91,552 91,554C91,555 93,558 94,562C95,565 97,568 97,570C97,571 99,574 100,578C101,581 103,584 103,586C104,587 105,590 113,612C121,634 122,637 123,638C123,640 125,643 126,646C132,664 133,665 135,658C135,655 137,651 138,648C139,645 141,640 142,637C143,634 145,631 145,630C145,628 146,626 147,624C148,622 149,620 149,618C149,617 150,615 151,613C152,611 153,609 153,608C154,606 155,602 160,588C161,585 163,581 164,578C165,574 167,570 168,566C169,563 171,559 172,556C177,542 178,538 179,536C179,535 180,533 181,530C182,528 183,526 183,526C186,521 184,515 177,498C176,496 174,492 173,489C172,486 170,481 169,479C167,476 165,471 164,468C163,464 161,461 161,461C160,460 160,459 160,458C160,456 162,456 187,456C210,456 214,456 214,458C214,458 214,460 215,461C215,462 217,466 219,471C222,479 224,485 231,503C233,508 235,512 235,514C235,515 237,518 238,522C239,525 241,528 241,530C242,531 243,534 251,556C259,578 260,581 261,582C261,584 263,587 264,590C265,594 267,597 267,598C267,600 269,603 270,606C271,610 273,613 273,614C274,617 277,626 283,641C285,646 286,650 287,651C287,652 288,655 289,657C291,664 291,664 296,652C297,648 299,645 299,644C300,642 301,638 306,624C311,611 312,607 313,606C314,604 315,600 320,586C325,573 326,569 327,568C327,566 328,564 329,562C330,560 331,558 331,556C332,555 333,551 338,538C343,524 344,520 345,518C346,517 347,513 352,500C357,486 358,482 359,480C359,479 361,476 362,473C363,470 365,465 366,462L368,456L379,456C392,456 391,455 386,469C384,475 381,480 381,482C381,483 380,485 379,486C378,488 377,491 377,492C376,493 376,495 375,496C374,498 360,534 357,542C357,544 356,546 355,547C355,549 354,551 353,552C353,553 352,556 351,557C351,558 347,569 342,580C337,592 333,603 333,604C332,605 331,608 331,609C330,610 330,612 329,613C328,615 312,658 309,664C309,666 308,668 307,669C305,674 304,676 296,698C282,733 284,730 279,730C274,730 274,730 272,726C271,723 270,721 270,721C270,720 269,718 268,715C267,713 265,709 264,707C263,704 262,702 262,702C262,701 261,698 259,694C257,691 256,688 256,687C256,687 255,685 254,682C253,680 251,676 250,674C249,671 248,669 248,668C248,668 247,666 246,663C245,661 243,657 242,655C241,652 240,650 240,650C240,649 239,647 238,644C236,641 234,636 233,633C232,630 230,625 228,622C227,619 226,617 226,616C226,616 225,614 224,611C223,609 221,605 220,603C219,600 218,598 218,598C218,597 217,595 216,592C214,589 212,584 211,581C210,578 208,573 206,570C205,567 204,565 204,564C204,564 200,555 199,553C198,552 198,550 198,550C198,547 195,548 194,550C194,551 189,563 184,577C178,591 173,603 173,604C173,606 172,608 171,609C171,611 170,613 169,614C168,616 168,618 167,619C167,620 162,632 157,645C152,658 147,670 147,671C146,672 145,674 145,676C145,677 144,679 143,680C141,686 140,688 132,709L124,730L119,730C116,730 115,730 114,727ZM654,726C653,723 652,721 652,721C652,720 651,718 650,715C648,712 646,707 645,704C643,698 642,696 638,688C637,685 636,683 636,682C636,682 635,680 634,677C630,669 629,667 627,661C626,658 624,654 623,652C622,649 620,645 619,642C617,636 616,634 612,626C611,623 610,621 610,620C610,620 609,618 608,615C604,607 603,605 601,599C599,593 598,591 594,583C593,580 592,578 592,578C592,577 591,575 590,572C586,564 585,562 583,556C582,553 580,549 579,547C578,544 576,540 575,537C573,531 572,529 568,521C567,518 566,516 566,516C566,515 565,513 564,510C560,502 559,500 557,494C556,491 554,487 553,485C552,482 550,478 549,475C546,468 544,463 543,461C540,456 540,456 569,456L595,456L599,466C601,470 604,478 605,482C607,487 609,491 609,492C609,494 611,497 612,500C613,504 615,507 615,508C615,510 617,513 618,516C619,520 621,523 621,524C621,526 623,530 625,535C627,539 629,547 631,551C633,556 635,560 635,562C635,563 637,566 638,570C639,573 641,576 641,578C641,579 643,582 644,586C645,589 647,592 647,594C647,595 649,599 651,604C653,608 655,616 657,620C659,625 661,629 661,630C661,632 663,635 664,638C665,642 667,645 667,646C671,656 672,659 672,661C672,664 674,661 677,655C678,652 679,649 679,648C680,646 681,643 682,640C683,637 685,633 686,630C687,626 689,622 690,618C691,615 693,611 694,608C699,594 700,590 701,588C701,587 702,585 703,583C704,581 705,579 705,578C705,576 706,574 707,572C708,570 709,568 709,566C710,565 711,561 716,548C721,533 722,530 724,526C727,519 726,518 724,512C719,501 718,499 718,498C718,498 717,496 716,493C715,491 713,487 712,485C711,482 710,480 710,479C710,479 709,477 708,474C707,472 705,468 704,466C703,464 702,461 701,460C700,456 699,456 728,456L754,456L756,462C757,464 759,467 759,468C759,470 761,474 763,479C765,483 767,491 769,495C771,500 773,504 773,506C773,507 775,510 776,514C777,517 779,520 779,522C779,523 781,526 782,530C783,533 785,536 785,538C785,539 787,543 789,548C791,552 793,560 795,564C797,569 799,573 799,574C799,576 801,579 802,582C803,586 805,589 805,590C805,592 807,595 808,598C809,602 811,605 811,606C811,608 813,612 815,617C821,633 824,641 827,649C832,662 832,662 833,662C834,662 834,661 834,661C834,660 835,657 836,654C837,652 839,647 840,644C845,629 846,626 847,624C848,623 849,619 854,606C859,592 860,588 861,586C862,585 863,581 868,568C873,554 874,550 875,548C875,547 876,545 877,543C878,541 879,539 879,538C880,536 881,532 886,518C891,505 892,501 893,500C894,498 895,494 900,480C905,467 906,463 907,462C907,460 908,459 908,458C909,456 932,455 932,457C932,457 932,458 931,459C930,460 918,490 909,514C908,517 906,521 905,524C904,526 892,557 887,570C886,573 884,577 883,580C883,582 882,584 881,585C880,587 866,623 863,632C863,633 862,635 861,636C860,638 859,641 859,642C858,643 858,645 857,646C857,647 853,658 848,670C843,681 839,692 839,693C838,694 838,696 837,697C837,698 836,701 835,702C835,703 833,709 831,714C824,730 824,730 819,730C816,730 815,730 814,727C813,726 812,722 811,719C809,716 808,714 808,713C808,713 807,711 806,708C805,706 803,702 802,700C801,697 800,695 800,694C800,694 799,692 798,689C797,687 795,683 794,681C793,678 792,676 792,676C792,675 791,673 790,670C788,667 786,662 785,659C784,656 782,651 780,648C779,645 778,643 778,642C778,642 777,640 776,637C771,626 770,624 770,624C770,623 769,621 768,618C766,615 764,610 763,607C762,604 760,599 758,596C757,593 756,591 756,590C756,590 755,588 754,585C753,583 751,579 750,577C749,574 748,572 748,572C748,571 747,568 745,565C744,561 741,556 740,553C739,550 737,547 737,547C737,547 735,552 732,558C726,574 725,576 723,582C722,583 721,585 721,586C721,588 716,599 711,612C706,625 701,636 701,638C701,639 700,641 699,642C699,644 697,646 697,648C696,649 695,651 695,652C691,664 676,702 675,704C674,705 673,707 673,708C673,710 672,712 671,714C670,717 669,719 667,724C664,732 658,733 654,726ZM442,721C441,721 441,559 441,360L441,0L466,0L491,0L491,361L490,722L466,722C453,722 442,722 442,721Z"/></svg>
+        <p>Free live sessions every Thursday and Friday. One topic, guided breathwork, a meditation, and your questions answered.</p>
+      </div>
+      <div>
+        <h4>Sessions</h4>
+        <ul>
+          <li><a href="/inner-circle">Upcoming sessions</a></li>
+          <li><a href="/inner-circle#past">Past sessions</a></li>
+          <li><a href="/inner-circle#questions">Questions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a data-link="instagram" href="#" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a data-link="email" data-link-text="1" href="#">hello@whitelightworker.com</a></li>
+          <li><a href="/about">About Saumya</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>&copy; <span class="num">2026</span> White Light Worker</span>
+      <span>Held on Zoom, in English &amp; Hindi</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+/* ============================================================
+   EDIT ME — every link, date and form target comes from here.
+   ============================================================ */
+const WLW = {
+  /* Where the reservation form posts. Get a free endpoint at
+     formspree.io or getform.io and paste the URL here. Until you do,
+     the form falls back to your Calendly link. */
+  formEndpoint    : "",
+
+  calendlyWebinar : "https://calendly.com/REPLACE-ME/free-session",
+  instagram       : "https://instagram.com/REPLACE-ME",
+  email           : "hello@whitelightworker.com",
+
+  /* Schedule — the site works out every date from this */
+  sessionHourIST  : 20,     // 20 = 8:00 PM India time
+  sessionMinIST   : 0,
+  sessionDays     : [4, 5], // 4 = Thursday, 5 = Friday
+  upcomingCount   : 2,      // how many upcoming sessions to list
+
+  topicRotation : [
+    "Life & direction",
+    "Relationships & family",
+    "Money & work",
+    "Health & energy"
+  ],
+
+  /* Pin a topic to a specific date (YYYY-MM-DD, India time) */
+  sessionTopics : {
+    // "2026-08-06": "Money & work"
+  },
+
+  /* Sessions already held — add a line after each one you run */
+  pastSessions : [
+    { date: "2026-07-24", topic: "Money & work",
+      note: "Replace these three with sessions you have actually run." },
+    { date: "2026-07-17", topic: "Relationships & family",
+      note: "Date, topic, and one line on what the room worked through." },
+    { date: "2026-07-10", topic: "Health & energy",
+      note: "Keep the newest at the top — the site sorts them anyway." }
+  ]
+};
+
+
+document.querySelectorAll("[data-link]").forEach(function (el) {
+  var v = WLW[el.dataset.link];
+  if (v) { el.href = el.dataset.link === "email" ? "mailto:" + v : v; }
+  if (el.dataset.linkText) { el.textContent = v; }
+});
+
+var IST = "Asia/Kolkata";
+var IST_OFFSET = 5.5 * 60 * 60 * 1000;
+var caps = function (s) { return s.replace(/\bam\b/i, "AM").replace(/\bpm\b/i, "PM"); };
+var esc = function (s) {
+  return String(s).replace(/[&<>"]/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+  });
+};
+
+function upcomingSessions(count) {
+  var list = [], now = Date.now();
+  for (var i = 0; i < 120 && list.length < count; i++) {
+    var istMid = new Date(now + i * 864e5 + IST_OFFSET);
+    if (WLW.sessionDays.indexOf(istMid.getUTCDay()) === -1) continue;
+    var utcMs = Date.UTC(istMid.getUTCFullYear(), istMid.getUTCMonth(), istMid.getUTCDate(),
+                         WLW.sessionHourIST, WLW.sessionMinIST) - IST_OFFSET;
+    if (utcMs > now) list.push(new Date(utcMs));
+  }
+  return list;
+}
+
+var fLong  = new Intl.DateTimeFormat("en-IN", { weekday: "long", day: "numeric", month: "long",
+                                                hour: "numeric", minute: "2-digit", hour12: true, timeZone: IST });
+var fDay   = new Intl.DateTimeFormat("en-IN", { weekday: "short", day: "numeric", month: "short", timeZone: IST });
+var fTime  = new Intl.DateTimeFormat("en-IN", { hour: "numeric", minute: "2-digit", hour12: true, timeZone: IST });
+var fLocal = new Intl.DateTimeFormat(undefined, { weekday: "short", hour: "numeric", minute: "2-digit", hour12: true });
+var fKey   = new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: IST });
+var fPast  = new Intl.DateTimeFormat("en-IN", { weekday: "short", day: "numeric", month: "short",
+                                                year: "numeric", timeZone: "UTC" });
+
+var UPCOMING = upcomingSessions(WLW.upcomingCount || 2);
+var NEXT = UPCOMING[0] || null;
+function topicFor(d, i) {
+  return WLW.sessionTopics[fKey.format(d)] || WLW.topicRotation[i % WLW.topicRotation.length];
+}
+
+if (NEXT) {
+  var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+  document.querySelectorAll("[data-next]").forEach(function (el) {
+    el.textContent = caps(fLong.format(NEXT)) + " IST";
+  });
+  document.querySelectorAll("[data-next-local]").forEach(function (el) {
+    if (tz === IST) { el.remove(); return; }
+    el.textContent = "= " + caps(fLocal.format(NEXT)) + " where you are (" + tz + ")";
+  });
+
+  var cd = document.querySelector("[data-countdown]");
+  if (cd) {
+    var pad = function (n) { return String(n).padStart(2, "0"); };
+    var tick = function () {
+      var d = NEXT - Date.now(); if (d < 0) d = 0;
+      cd.querySelector("[data-d]").textContent = pad(Math.floor(d / 864e5));
+      cd.querySelector("[data-h]").textContent = pad(Math.floor(d / 36e5) % 24);
+      cd.querySelector("[data-m]").textContent = pad(Math.floor(d / 6e4) % 60);
+      cd.querySelector("[data-s]").textContent = pad(Math.floor(d / 1e3) % 60);
+    };
+    tick(); setInterval(tick, 1000);
+  }
+}
+
+/* ---- upcoming + past lists ---- */
+var upBox = document.querySelector("[data-upcoming]");
+if (upBox) {
+  upBox.innerHTML = UPCOMING.map(function (d, i) {
+    return '<div class="srow">' +
+      '<div class="srow-when"><span class="sdate">' + esc(fDay.format(d)) + '</span>' +
+      '<span class="stime">' + esc(caps(fTime.format(d))) + ' IST</span></div>' +
+      '<div><h3 class="stopic">' + esc(topicFor(d, i)) + '</h3>' +
+      '<p class="snote">' + (i === 0 ? "Next session. " : "") +
+      'Sixty minutes on Zoom — topic, breathwork, meditation, your questions.</p></div>' +
+      '<a class="sflag" href="#reserve">Reserve</a></div>';
+  }).join("");
+  var cu = document.querySelector("[data-count-upcoming]");
+  if (cu) cu.textContent = UPCOMING.length;
+}
+
+var pastBox = document.querySelector("[data-past]");
+if (pastBox) {
+  var past = (WLW.pastSessions || []).slice().sort(function (a, b) { return b.date.localeCompare(a.date); });
+  pastBox.innerHTML = past.length ? past.map(function (s) {
+    var d = new Date(s.date + "T00:00:00Z");
+    return '<div class="srow srow--past">' +
+      '<div class="srow-when"><span class="sdate">' + esc(fPast.format(d)) + '</span>' +
+      '<span class="stime">Held</span></div>' +
+      '<div><h3 class="stopic">' + esc(s.topic) + '</h3>' +
+      (s.note ? '<p class="snote">' + esc(s.note) + '</p>' : '') + '</div></div>';
+  }).join("") : '<p class="slist-empty">The first sessions are still ahead.</p>';
+  var cp = document.querySelector("[data-count-past]");
+  if (cp) cp.textContent = past.length;
+}
+
+/* ---- capsule tabs ---- */
+var tabs = document.querySelectorAll("[data-tab]");
+tabs.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    tabs.forEach(function (b) { b.setAttribute("aria-selected", b === btn ? "true" : "false"); });
+    document.querySelectorAll("[data-panel]").forEach(function (p) {
+      p.hidden = p.dataset.panel !== btn.dataset.tab;
+    });
+  });
+});
+
+/* ---- reservation form ---- */
+var form = document.querySelector("[data-reserve]");
+if (form) {
+  var sel = form.querySelector("[data-session-options]");
+  if (sel) {
+    sel.innerHTML = UPCOMING.map(function (d, i) {
+      var label = caps(fDay.format(d)) + " — " + caps(fTime.format(d)) + " IST — " + topicFor(d, i);
+      return '<option value="' + esc(label) + '">' + esc(label) + "</option>";
+    }).join("");
+  }
+
+  var setErr = function (field, msg) {
+    field.classList.toggle("invalid", !!msg);
+    field.querySelector(".err").textContent = msg || "";
+  };
+  var validate = function () {
+    var ok = true;
+    form.querySelectorAll(".field").forEach(function (f) {
+      var input = f.querySelector("input,select");
+      if (!input || !input.hasAttribute("required")) return;
+      var v = input.value.trim();
+      var msg = "";
+      if (!v) msg = "This one is needed.";
+      else if (input.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) msg = "Check the email address.";
+      setErr(f, msg);
+      if (msg) ok = false;
+    });
+    return ok;
+  };
+  form.querySelectorAll("input,select").forEach(function (el) {
+    el.addEventListener("input", function () {
+      var f = el.closest(".field");
+      if (f && f.classList.contains("invalid")) setErr(f, "");
+    });
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!validate()) {
+      var bad = form.querySelector(".field.invalid input,.field.invalid select");
+      if (bad) bad.focus();
+      return;
+    }
+    var btn = form.querySelector("button[type=submit]");
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+
+    var done = function () {
+      var card = form.closest(".form-card");
+      card.querySelector(".form-head").remove();
+      var note = card.querySelector(".form-note");
+      if (note) note.remove();
+      form.outerHTML =
+        '<div class="form-ok"><div class="tick">&#10003;</div>' +
+        "<h3>You're in.</h3>" +
+        "<p>The Zoom link is on its way to " + esc(data.email) + ". Check spam if it hasn't landed in a few minutes.</p></div>";
+    };
+
+    if (WLW.formEndpoint) {
+      btn.disabled = true;
+      btn.querySelector("span").textContent = "Sending…";
+      fetch(WLW.formEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data)
+      }).then(function (r) {
+        if (!r.ok) throw new Error("bad response");
+        done();
+      }).catch(function () {
+        btn.disabled = false;
+        btn.querySelector("span").textContent = "Reserve my seat";
+        var f = form.querySelector(".field");
+        setErr(f, "That did not go through. Please email " + WLW.email + " instead.");
+      });
+    } else if (WLW.calendlyWebinar && WLW.calendlyWebinar.indexOf("REPLACE-ME") === -1) {
+      window.location.href = WLW.calendlyWebinar;
+    } else {
+      var note = form.parentElement.querySelector(".form-note");
+      if (note) {
+        note.innerHTML = "Online booking is not connected yet — please email " +
+          '<a href="mailto:' + esc(WLW.email) + '" style="color:var(--orange);text-decoration:underline">' +
+          esc(WLW.email) + "</a> to reserve your seat.";
+        note.style.color = "var(--orange)";
+      }
+    }
+  });
+}
+
+/* ---- scroll reveal ---- */
+var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var rises = document.querySelectorAll(".rise");
+if (reduce || !("IntersectionObserver" in window)) {
+  rises.forEach(function (el) { el.classList.add("in"); });
+} else {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { rootMargin: "0px 0px -10% 0px", threshold: 0.05 });
+  rises.forEach(function (el) { io.observe(el); });
+}
+
+/* ---- mobile menu ---- */
+var mb = document.querySelector(".menu-btn");
+if (mb) {
+  mb.addEventListener("click", function () {
+    var open = document.body.classList.toggle("nav-open");
+    mb.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  document.querySelectorAll(".nav a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      document.body.classList.remove("nav-open");
+      mb.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+</script>
+</body>
+</html>
