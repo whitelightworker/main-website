@@ -699,7 +699,15 @@ p.body{color:var(--ink-soft)}
   .rail{grid-auto-columns:26%}
   .foot-grid{grid-template-columns:1.5fr 1fr 1fr}
   .foot-brand{grid-column:auto;margin-bottom:0}
-  .hero--center .hero-grid{gap:1.75rem}
+  .hero--center .hero-grid{
+    grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    justify-items:start;text-align:left;align-items:center;gap:3rem;
+  }
+  .hero--center .breath{order:2;margin-bottom:0}
+  .hero--center .eyebrow{justify-content:flex-start}
+  .hero--center .lead{margin-inline:0}
+  .hero--center .hero-actions{justify-content:flex-start}
+  .hero--center .next-line{justify-content:flex-start;text-align:left}
   .who-lede{font-size:1.3rem}
 }
 @media (min-width:64em){
