@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>About Saumya — White Light Worker</title>
-<meta name="description" content="Yoga teacher, pranic healer, certified aura reader and numerologist. 500+ numerology readings, 100+ aura readings.">
+<meta name="description" content="Numerologist, natural aura reader and healer, and a 200-hour yoga teacher trained at Art of Living, Rishikesh.">
 <meta property="og:title" content="About Saumya — White Light Worker">
-<meta property="og:description" content="Yoga teacher, pranic healer, certified aura reader and numerologist. 500+ numerology readings, 100+ aura readings.">
+<meta property="og:description" content="Numerologist, natural aura reader and healer, and a 200-hour yoga teacher trained at Art of Living, Rishikesh.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#7C2FE8">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
@@ -576,6 +576,139 @@ p.body{color:var(--ink-soft)}
   .breath-label .out{opacity:0}
   .rise{opacity:1;transform:none}
 }
+
+/* ============================================================
+   v3 additions
+   ============================================================ */
+
+/* ---- footer: two link columns side by side on mobile ---- */
+.foot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem 1rem}
+.foot-brand{grid-column:1/-1;margin-bottom:.25rem}
+.foot-grid h4{font-size:.6rem;letter-spacing:.14em;margin-bottom:.7rem}
+.foot-grid li{margin-bottom:.45rem;font-size:.88rem}
+.foot-col--wa h4{color:var(--orange)}
+.foot-col--wa a:hover{color:var(--orange)}
+
+/* ---- centred hero (home) ---- */
+.hero--center .hero-grid{grid-template-columns:1fr;justify-items:center;text-align:center;gap:1.5rem}
+.hero--center .breath{margin-bottom:.25rem}
+.hero--center .eyebrow{justify-content:center}
+.hero--center .lead{margin-inline:auto}
+.hero--center .hero-actions{justify-content:center}
+.hero--center .next-line{align-items:center;justify-content:center;text-align:center}
+
+/* ---- WhatsApp button ---- */
+.btn--wa{background:var(--orange);border-color:var(--orange);color:#fff}
+.btn--wa:hover{background:#A63409;border-color:#A63409;box-shadow:0 6px 20px -8px rgba(194,65,12,.55)}
+.btn--wa-ghost{background:transparent;color:var(--orange);border-color:var(--orange-lite)}
+.btn--wa-ghost:hover{background:var(--orange-wash);border-color:var(--orange);color:var(--orange);box-shadow:none}
+.wa-line{
+  margin-top:1rem;font-size:.85rem;color:var(--slate);display:flex;flex-wrap:wrap;
+  align-items:center;justify-content:inherit;gap:.4rem;
+}
+.wa-line a{color:var(--orange);text-decoration:underline;text-underline-offset:2px}
+
+/* ---- who sits in the room ---- */
+.who{display:grid;gap:1.1rem;margin-top:1.75rem}
+.who-card{
+  position:relative;border:1px solid var(--rule);border-radius:16px;padding:1.4rem 1.25rem;
+  background:linear-gradient(165deg,var(--violet-wash),var(--paper) 60%);overflow:hidden;
+}
+.who-card--blue{background:linear-gradient(165deg,var(--blue-wash),var(--paper) 60%)}
+.who-card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--violet),var(--violet-lite));
+}
+.who-card--blue::before{background:linear-gradient(180deg,var(--blue),var(--blue-lite))}
+.who-tag{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--violet);display:block;margin-bottom:.7rem;
+}
+.who-card--blue .who-tag{color:var(--blue)}
+.who-lede{font-family:var(--serif);font-size:1.18rem;font-weight:400;line-height:1.32;letter-spacing:-.008em}
+.who-sub{margin-top:.6rem;font-size:.9rem;color:var(--slate)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.chip{
+  font-size:.78rem;line-height:1;padding:.45rem .7rem;border-radius:999px;
+  background:var(--paper);border:1px solid var(--violet-rule);color:var(--ink-soft);
+}
+.who-card--blue .chip{border-color:var(--blue-lite)}
+.who-arrive{
+  margin-top:1.1rem;padding-top:.9rem;border-top:1px dashed var(--violet-rule);
+  font-family:var(--serif);font-style:italic;font-size:1rem;line-height:1.4;color:var(--ink);
+}
+.who-card--blue .who-arrive{border-top-color:var(--blue-lite)}
+.who-foot{
+  margin-top:1.5rem;padding:1rem 1.15rem;border-radius:14px;
+  background:var(--orange-wash);border:1px solid var(--orange-lite);
+  font-size:.94rem;color:var(--ink-soft);
+}
+.who-foot b{color:var(--orange);font-weight:500}
+
+/* ---- horizontal testimonial rail ---- */
+.rail-wrap{position:relative;margin-top:1.75rem;overflow:hidden}
+.rail{
+  display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:.9rem;
+  overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  padding:.25rem 0 1rem;scrollbar-width:thin;
+  scrollbar-color:var(--violet-rule) transparent;
+}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:var(--violet-rule);border-radius:999px}
+.rail::-webkit-scrollbar-track{background:transparent}
+.shot{
+  scroll-snap-align:center;position:relative;border:1px solid var(--rule);border-radius:14px;
+  overflow:hidden;background:var(--paper);aspect-ratio:9/16;
+  box-shadow:0 10px 26px -20px rgba(124,47,232,.5);
+}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.shot-ph{
+  position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:.5rem;
+  text-align:center;padding:1.1rem;border-radius:14px;
+  background:linear-gradient(165deg,var(--violet-wash),var(--wash-blue));
+}
+.shot-ph b{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);font-weight:400}
+.shot-ph span{font-size:.78rem;color:var(--slate);line-height:1.5;max-width:12rem}
+.shot-ph i{font-style:normal;font-family:var(--mono);font-size:1.5rem;color:var(--violet-lite)}
+.rail-hint{
+  margin-top:.25rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:.45rem;
+}
+.rail-hint::after{content:"\2192";font-size:.85rem}
+
+/* ---- form: redirect notice ---- */
+.form-ok .tick{background:var(--orange-wash);color:var(--orange)}
+.redirect-note{
+  margin-top:1rem;font-size:.82rem;color:var(--slate);display:flex;
+  align-items:center;justify-content:center;gap:.5rem;
+}
+.redirect-note .dot{
+  width:.45rem;height:.45rem;border-radius:50%;background:var(--orange);
+  animation:pulse 1s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+@media (min-width:37.5em){
+  .who{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+  .who-foot{grid-column:1/-1;margin-top:.25rem}
+  .rail{grid-auto-columns:44%}
+  .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:48em){
+  .rail{grid-auto-columns:26%}
+  .foot-grid{grid-template-columns:1.5fr 1fr 1fr}
+  .foot-brand{grid-column:auto;margin-bottom:0}
+  .hero--center .hero-grid{gap:1.75rem}
+  .who-lede{font-size:1.3rem}
+}
+@media (min-width:64em){
+  .rail{grid-auto-columns:22%}
+}
+
+/* long addresses must not push the layout wide on narrow screens */
+.foot-grid a{overflow-wrap:anywhere;word-break:break-word;display:inline-block;max-width:100%}
+.foot-grid li{line-height:1.45}
 </style>
 </head>
 <body>
@@ -592,9 +725,9 @@ p.body{color:var(--ink-soft)}
           <a href="/">Home</a>
           <a href="/inner-circle">Inner Circle</a>
           <a href="/about" aria-current="page">About</a>
-      <a class="btn" href="/inner-circle"><span>Reserve a seat</span></a>
+      <a class="btn" href="/inner-circle"><span>Join the Inner Circle</span></a>
     </nav>
-    <a class="btn btn--sm head-cta" href="/inner-circle"><span>Reserve a seat</span></a>
+    <a class="btn btn--sm head-cta" href="/inner-circle"><span>Join the Inner Circle</span></a>
   </div>
 </header>
 
@@ -604,7 +737,7 @@ p.body{color:var(--ink-soft)}
     <div class="shell">
       <p class="eyebrow rise">About</p>
       <h1 class="display rise rise-d1">Saumya</h1>
-      <p class="lead rise rise-d2">Yoga teacher, pranic healer, aura reader, numerologist. The youngest person in the room at every training she has ever taken.</p>
+      <p class="lead rise rise-d2">An exceptional numerologist, a natural aura reader and healer, and a yoga teacher trained at Art of Living. It began with an awakening she did not ask for, at nineteen.</p>
     </div>
   </section>
 
@@ -624,23 +757,32 @@ p.body{color:var(--ink-soft)}
           <p class="portrait-cap">Saumya &middot; Pune</p>
         </div>
         <div class="rise rise-d2">
-          <p class="body"><em>Replace this paragraph with your own beginning &mdash; what sent you toward this work, and roughly when. Three or four sentences is plenty. It is the most-read paragraph on any site like this one.</em></p>
-          <p class="body" style="margin-top:.85rem">What is worth knowing beyond that: the training, the count, and the intention.</p>
-          <p class="eyebrow" style="margin-top:2rem">The training</p>
-          <div class="creds" style="grid-template-columns:1fr">
-            <div class="cred"><i>01</i><div><b>200-hour Yoga Teacher</b><span>Art of Living</span></div></div>
-            <div class="cred"><i>02</i><div><b>Pranic Healer</b><span>World Pranic Healing Foundation, Philippines</span></div></div>
-            <div class="cred"><i>03</i><div><b>Certified Aura Reader</b><span>Trained in London</span></div></div>
-            <div class="cred"><i>04</i><div><b>Numerologist</b><span>Practising since &mdash; add year</span></div></div>
-          </div>
+          <p class="body">Saumya had a major spiritual awakening at the age of nineteen. It came out of the blue, and the changes were sudden &mdash; a shift in her mind, a new control over her emotions, both beyond what she could explain at that age.</p>
+          <p class="body" style="margin-top:.9rem">That incident sent her looking for a reason, and the search opened into everything else. Understanding energy, and how energy works, led her first to numbers and their vibration &mdash; and made her an expert in numerology.</p>
+          <p class="body" style="margin-top:.9rem">Then to yoga. To understand and master the energy system of the body properly, she completed a 200-hour Yoga Teacher Training at Art of Living, Rishikesh.</p>
+          <p class="body" style="margin-top:.9rem">Along the way she found that healing came naturally to her, and that aura reading was something she had carried in from an earlier birth.</p>
+          <p class="body" style="margin-top:.9rem">With that mix &mdash; natural ability and precisely acquired skill &mdash; she works with clients on their emotional, spiritual and material wellbeing, across health, wealth and relationships.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--soft">
+    <div class="shell">
+      <p class="eyebrow eyebrow--orange rise">At a glance</p>
+      <h2 class="title measure rise rise-d1" style="margin-top:1.1rem">Natural ability, <em>then the training.</em></h2>
+      <div class="creds">
+        <div class="cred rise rise-d1"><i>01</i><div><b>An exceptional numerologist</b><span>Numbers, and the vibration behind them</span></div></div>
+        <div class="cred rise rise-d2"><i>02</i><div><b>A natural aura reader &amp; healer</b><span>Carried in, not learned</span></div></div>
+        <div class="cred rise rise-d3"><i>03</i><div><b>Yoga teacher, 200 hours</b><span>Art of Living, Rishikesh</span></div></div>
+        <div class="cred rise rise-d4"><i>04</i><div><b>3+ years in energy healing</b><span>Health, wealth and relationships</span></div></div>
       </div>
     </div>
   </section>
 
   <section class="band band--violet">
     <div class="shell">
-      <p class="eyebrow rise">The count so far</p>
+      <p class="eyebrow eyebrow--orange rise">The count so far</p>
       <div class="stats">
         <div class="stat rise rise-d1"><b class="num">500+</b><span>Numerology<br>readings</span></div>
         <div class="stat rise rise-d2"><b class="num">100+</b><span>Aura<br>readings</span></div>
@@ -652,10 +794,9 @@ p.body{color:var(--ink-soft)}
 
   <section class="band">
     <div class="shell">
-      <p class="eyebrow eyebrow--orange rise">The intention</p>
-      <blockquote class="pull rise rise-d1" style="margin-top:1.25rem">To reach <em>one hundred people</em> &mdash; women and men &mdash; and leave each of their situations materially better than it was.</blockquote>
-      <p class="pull-note rise rise-d2">Not a hundred followers. A hundred people whose money, health, marriage or direction actually shifted. That is the whole project, and the free Thursday and Friday sessions are how it happens.</p>
-      <p class="rise rise-d3" style="margin-top:2rem"><a class="btn" href="/inner-circle"><span>Join the next session</span><span class="arw">&rarr;</span></a></p>
+      <p class="eyebrow rise">The intention</p>
+      <blockquote class="pull rise rise-d1" style="margin-top:1.25rem">To enrich the lives of <em>one hundred people</em> by December 2026 &mdash; helping them read their numbers and their aura, and draw positivity and balance back in within six weeks.</blockquote>
+      <p class="pull-note rise rise-d2">Not a hundred followers. A hundred people whose health, wealth or relationships actually shifted. That is the whole project, and the free Thursday and Friday sessions are how it happens.</p>
     </div>
   </section>
 
@@ -663,12 +804,13 @@ p.body{color:var(--ink-soft)}
     <div class="cta-glow"></div>
     <div class="shell cta-in">
       <div>
-        <p class="eyebrow rise">Free &middot; Live on Zoom &middot; Sixty minutes</p>
+        <p class="eyebrow eyebrow--orange rise">Free &middot; Live on Zoom &middot; Sixty minutes</p>
         <h2 class="title rise rise-d1" style="margin-top:1.1rem">The next one is <em data-next>this Thursday</em>.</h2>
         <p class="lead rise rise-d2" style="margin-top:1rem;max-width:32rem">Bring the thing you have been turning over.</p>
       </div>
       <div class="rise rise-d3">
-        <a class="btn" style="width:100%" href="/inner-circle"><span>Reserve your seat</span><span class="arw">&rarr;</span></a>
+        <a class="btn" style="width:100%" href="/inner-circle"><span>Join the Inner Circle</span><span class="arw">&rarr;</span></a>
+        <p class="wa-line">Or <a data-wa href="#" target="_blank" rel="noopener">DM on WhatsApp</a> to ask anything first.</p>
       </div>
     </div>
   </section>
@@ -690,9 +832,10 @@ p.body{color:var(--ink-soft)}
           <li><a href="/inner-circle#questions">Questions</a></li>
         </ul>
       </div>
-      <div>
+      <div class="foot-col--wa">
         <h4>Elsewhere</h4>
         <ul>
+          <li><a data-wa href="#" target="_blank" rel="noopener">DM on WhatsApp</a></li>
           <li><a data-link="instagram" href="#" target="_blank" rel="noopener">Instagram</a></li>
           <li><a data-link="email" data-link-text="1" href="#">hello@whitelightworker.com</a></li>
           <li><a href="/about">About Saumya</a></li>
@@ -709,45 +852,49 @@ p.body{color:var(--ink-soft)}
 <script>
 
 /* ============================================================
-   EDIT ME — every link, date and form target comes from here.
+   EDIT ME — the whole site reads from this one block.
    ============================================================ */
 const WLW = {
-  /* Where the reservation form posts. Get a free endpoint at
-     formspree.io or getform.io and paste the URL here. Until you do,
-     the form falls back to your Calendly link. */
-  formEndpoint    : "",
+  /* ---- WhatsApp ---- */
+  waGroupLink : "https://chat.whatsapp.com/REPLACE-ME",   // group people join after the form
+  waNumber    : "919999999999",                           // your number, country code, digits only
+  waMessage   : "Hi Saumya, I'd like to know more about the Inner Circle.",
 
-  calendlyWebinar : "https://calendly.com/REPLACE-ME/free-session",
-  instagram       : "https://instagram.com/REPLACE-ME",
-  email           : "hello@whitelightworker.com",
+  /* ---- Where the form posts ----
+     Free endpoint from formspree.io or getform.io. Leave empty and the
+     form still works — it just sends people straight to the WhatsApp group. */
+  formEndpoint : "",
 
-  /* Schedule — the site works out every date from this */
-  sessionHourIST  : 20,     // 20 = 8:00 PM India time
-  sessionMinIST   : 0,
-  sessionDays     : [4, 5], // 4 = Thursday, 5 = Friday
-  upcomingCount   : 2,      // how many upcoming sessions to list
+  instagram : "https://instagram.com/REPLACE-ME",
+  email     : "hello@whitelightworker.com",
 
+  /* ============================================================
+     THE SCHEDULE — change the session day or time HERE and nowhere else.
+     Every date on the site (hero, countdown, form, upcoming, past)
+     is worked out from these four lines.
+     ============================================================ */
+  sessionHourIST : 20,      // 20 = 8:00 PM India time
+  sessionMinIST  : 0,
+  sessionDays    : [4, 5],  // 0=Sun 1=Mon 2=Tue 3=Wed 4=Thu 5=Fri 6=Sat
+  sessionMinutes : 60,      // how long a session runs
+
+  upcomingCount : 2,        // upcoming sessions to list
+  pastCount     : 4,        // past sessions to list
+
+  /* Topics cycle in this order, anchored to a fixed start date so the
+     rotation stays consistent for everyone. */
   topicRotation : [
     "Life & direction",
     "Relationships & family",
     "Money & work",
     "Health & energy"
   ],
+  rotationAnchor : "2026-01-01",
 
-  /* Pin a topic to a specific date (YYYY-MM-DD, India time) */
+  /* Optional: pin a topic to one date (YYYY-MM-DD, India time) */
   sessionTopics : {
     // "2026-08-06": "Money & work"
-  },
-
-  /* Sessions already held — add a line after each one you run */
-  pastSessions : [
-    { date: "2026-07-24", topic: "Money & work",
-      note: "Replace these three with sessions you have actually run." },
-    { date: "2026-07-17", topic: "Relationships & family",
-      note: "Date, topic, and one line on what the room worked through." },
-    { date: "2026-07-10", topic: "Health & energy",
-      note: "Keep the newest at the top — the site sorts them anyway." }
-  ]
+  }
 };
 
 
@@ -766,16 +913,51 @@ var esc = function (s) {
   });
 };
 
+/* ---- WhatsApp links ---- */
+var waChat = "https://wa.me/" + String(WLW.waNumber).replace(/\D/g, "") +
+             "?text=" + encodeURIComponent(WLW.waMessage || "");
+document.querySelectorAll("[data-wa]").forEach(function (el) { el.href = waChat; });
+document.querySelectorAll("[data-wa-group]").forEach(function (el) { el.href = WLW.waGroupLink; });
+
+/* ============================================================
+   THE SCHEDULE ENGINE
+   Builds every session date from WLW.sessionDays / sessionHourIST.
+   A session counts as "past" once it has finished running, so it
+   moves from Upcoming to Past on its own.
+   ============================================================ */
+function sessionAt(dayMs) {
+  var istMid = new Date(dayMs + IST_OFFSET);
+  if (WLW.sessionDays.indexOf(istMid.getUTCDay()) === -1) return null;
+  return new Date(Date.UTC(istMid.getUTCFullYear(), istMid.getUTCMonth(), istMid.getUTCDate(),
+                           WLW.sessionHourIST, WLW.sessionMinIST) - IST_OFFSET);
+}
+function endsAt(d) { return d.getTime() + (WLW.sessionMinutes || 60) * 6e4; }
+
 function upcomingSessions(count) {
-  var list = [], now = Date.now();
-  for (var i = 0; i < 120 && list.length < count; i++) {
-    var istMid = new Date(now + i * 864e5 + IST_OFFSET);
-    if (WLW.sessionDays.indexOf(istMid.getUTCDay()) === -1) continue;
-    var utcMs = Date.UTC(istMid.getUTCFullYear(), istMid.getUTCMonth(), istMid.getUTCDate(),
-                         WLW.sessionHourIST, WLW.sessionMinIST) - IST_OFFSET;
-    if (utcMs > now) list.push(new Date(utcMs));
+  var out = [], now = Date.now();
+  for (var i = 0; i < 200 && out.length < count; i++) {
+    var d = sessionAt(now + i * 864e5);
+    if (d && endsAt(d) > now) out.push(d);
   }
-  return list;
+  return out;
+}
+function pastSessions(count) {
+  var out = [], now = Date.now();
+  for (var i = 0; i < 200 && out.length < count; i++) {
+    var d = sessionAt(now - i * 864e5);
+    if (d && endsAt(d) <= now) out.push(d);
+  }
+  return out;   // already newest-first
+}
+
+/* Topic rotation anchored to a fixed date so it never drifts */
+var ANCHOR = Date.parse((WLW.rotationAnchor || "2026-01-01") + "T00:00:00Z");
+function topicFor(d) {
+  var pinned = WLW.sessionTopics[fKey.format(d)];
+  if (pinned) return pinned;
+  var n = WLW.topicRotation.length;
+  var idx = Math.floor((d.getTime() - ANCHOR) / 864e5);
+  return WLW.topicRotation[((idx % n) + n) % n];
 }
 
 var fLong  = new Intl.DateTimeFormat("en-IN", { weekday: "long", day: "numeric", month: "long",
@@ -788,10 +970,8 @@ var fPast  = new Intl.DateTimeFormat("en-IN", { weekday: "short", day: "numeric"
                                                 year: "numeric", timeZone: "UTC" });
 
 var UPCOMING = upcomingSessions(WLW.upcomingCount || 2);
+var PAST = pastSessions(WLW.pastCount || 4);
 var NEXT = UPCOMING[0] || null;
-function topicFor(d, i) {
-  return WLW.sessionTopics[fKey.format(d)] || WLW.topicRotation[i % WLW.topicRotation.length];
-}
 
 if (NEXT) {
   var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
@@ -824,10 +1004,10 @@ if (upBox) {
     return '<div class="srow">' +
       '<div class="srow-when"><span class="sdate">' + esc(fDay.format(d)) + '</span>' +
       '<span class="stime">' + esc(caps(fTime.format(d))) + ' IST</span></div>' +
-      '<div><h3 class="stopic">' + esc(topicFor(d, i)) + '</h3>' +
+      '<div><h3 class="stopic">' + esc(topicFor(d)) + '</h3>' +
       '<p class="snote">' + (i === 0 ? "Next session. " : "") +
       'Sixty minutes on Zoom — topic, breathwork, meditation, your questions.</p></div>' +
-      '<a class="sflag" href="#reserve">Reserve</a></div>';
+      '<a class="sflag" href="#reserve">Join</a></div>';
   }).join("");
   var cu = document.querySelector("[data-count-upcoming]");
   if (cu) cu.textContent = UPCOMING.length;
@@ -835,17 +1015,15 @@ if (upBox) {
 
 var pastBox = document.querySelector("[data-past]");
 if (pastBox) {
-  var past = (WLW.pastSessions || []).slice().sort(function (a, b) { return b.date.localeCompare(a.date); });
-  pastBox.innerHTML = past.length ? past.map(function (s) {
-    var d = new Date(s.date + "T00:00:00Z");
+  pastBox.innerHTML = PAST.length ? PAST.map(function (d) {
     return '<div class="srow srow--past">' +
-      '<div class="srow-when"><span class="sdate">' + esc(fPast.format(d)) + '</span>' +
+      '<div class="srow-when"><span class="sdate">' + esc(fDay.format(d)) + '</span>' +
       '<span class="stime">Held</span></div>' +
-      '<div><h3 class="stopic">' + esc(s.topic) + '</h3>' +
-      (s.note ? '<p class="snote">' + esc(s.note) + '</p>' : '') + '</div></div>';
+      '<div><h3 class="stopic">' + esc(topicFor(d)) + '</h3>' +
+      '<p class="snote">Not recorded — the room was private.</p></div></div>';
   }).join("") : '<p class="slist-empty">The first sessions are still ahead.</p>';
   var cp = document.querySelector("[data-count-past]");
-  if (cp) cp.textContent = past.length;
+  if (cp) cp.textContent = PAST.length;
 }
 
 /* ---- capsule tabs ---- */
@@ -864,8 +1042,8 @@ var form = document.querySelector("[data-reserve]");
 if (form) {
   var sel = form.querySelector("[data-session-options]");
   if (sel) {
-    sel.innerHTML = UPCOMING.map(function (d, i) {
-      var label = caps(fDay.format(d)) + " — " + caps(fTime.format(d)) + " IST — " + topicFor(d, i);
+    sel.innerHTML = UPCOMING.map(function (d) {
+      var label = caps(fDay.format(d)) + " — " + caps(fTime.format(d)) + " IST — " + topicFor(d);
       return '<option value="' + esc(label) + '">' + esc(label) + "</option>";
     }).join("");
   }
@@ -881,8 +1059,14 @@ if (form) {
       if (!input || !input.hasAttribute("required")) return;
       var v = input.value.trim();
       var msg = "";
-      if (!v) msg = "This one is needed.";
-      else if (input.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) msg = "Check the email address.";
+      if (!v) {
+        msg = "This one is needed.";
+      } else if (input.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
+        msg = "Check the email address.";
+      } else if (input.type === "tel") {
+        var digits = v.replace(/\D/g, "");
+        if (digits.length < 8 || digits.length > 15) msg = "Enter a valid WhatsApp number.";
+      }
       setErr(f, msg);
       if (msg) ok = false;
     });
@@ -906,15 +1090,33 @@ if (form) {
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
 
+    var joinable = WLW.waGroupLink && WLW.waGroupLink.indexOf("REPLACE-ME") === -1;
+
     var done = function () {
       var card = form.closest(".form-card");
-      card.querySelector(".form-head").remove();
+      var head = card.querySelector(".form-head");
+      if (head) head.remove();
       var note = card.querySelector(".form-note");
       if (note) note.remove();
       form.outerHTML =
         '<div class="form-ok"><div class="tick">&#10003;</div>' +
-        "<h3>You're in.</h3>" +
-        "<p>The Zoom link is on its way to " + esc(data.email) + ". Check spam if it hasn't landed in a few minutes.</p></div>";
+        "<h3>You're in, " + esc(String(data.name).split(" ")[0]) + ".</h3>" +
+        "<p>Last step — join the WhatsApp group. That is where the Zoom link and the reminder are sent.</p>" +
+        '<p style="margin-top:1.1rem"><a class="btn btn--wa" data-wa-group href="' +
+          esc(WLW.waGroupLink) + '"><span>Join the WhatsApp group</span><span class="arw">&rarr;</span></a></p>' +
+        (joinable
+          ? '<p class="redirect-note"><span class="dot"></span> Taking you there in <b data-rc>3</b>…</p>'
+          : '<p class="redirect-note">Group link not set up yet — email ' + esc(WLW.email) + " and you'll be added.</p>");
+
+      if (joinable) {
+        var n = 3;
+        var rc = card.querySelector("[data-rc]");
+        var iv = setInterval(function () {
+          n -= 1;
+          if (rc) rc.textContent = n;
+          if (n <= 0) { clearInterval(iv); window.location.href = WLW.waGroupLink; }
+        }, 1000);
+      }
     };
 
     if (WLW.formEndpoint) {
@@ -929,20 +1131,12 @@ if (form) {
         done();
       }).catch(function () {
         btn.disabled = false;
-        btn.querySelector("span").textContent = "Reserve my seat";
-        var f = form.querySelector(".field");
-        setErr(f, "That did not go through. Please email " + WLW.email + " instead.");
+        btn.querySelector("span").textContent = "Join the Inner Circle";
+        setErr(form.querySelector(".field"),
+               "That did not go through. Please message " + WLW.email + " instead.");
       });
-    } else if (WLW.calendlyWebinar && WLW.calendlyWebinar.indexOf("REPLACE-ME") === -1) {
-      window.location.href = WLW.calendlyWebinar;
     } else {
-      var note = form.parentElement.querySelector(".form-note");
-      if (note) {
-        note.innerHTML = "Online booking is not connected yet — please email " +
-          '<a href="mailto:' + esc(WLW.email) + '" style="color:var(--orange);text-decoration:underline">' +
-          esc(WLW.email) + "</a> to reserve your seat.";
-        note.style.color = "var(--orange)";
-      }
+      done();
     }
   });
 }
