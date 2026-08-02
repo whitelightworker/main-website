@@ -982,7 +982,7 @@ const WLW = {
   /* ---- Where the form posts ----
      Free endpoint from formspree.io or getform.io. Leave empty and the
      form still works — it just sends people straight to the WhatsApp group. */
-  formEndpoint : "",
+  formEndpoint : "https://script.google.com/macros/s/AKfycbyottEOe0MovcJJ_5qGWVeaXPaCmsPW52RoHm_rnupB-jzCJVVEMEoQUpbavr7jM89p6A/exec",
 
   instagram : "https://instagram.com/REPLACE-ME",
   email     : "hello@whitelightworker.com",
@@ -1243,7 +1243,7 @@ if (form) {
       btn.querySelector("span").textContent = "Sending…";
       fetch(WLW.formEndpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(data)
       }).then(function (r) {
         if (!r.ok) throw new Error("bad response");
